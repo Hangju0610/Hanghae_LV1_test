@@ -9,7 +9,7 @@ Router.get('/', async (req, res) => {
             return {
                 userId: list['_id'],
                 name: list['name'],
-                id: list['id'],
+                email: list['id'] + '@teamsparta.co',
                 password: list['password'],
             };
         });
@@ -27,7 +27,7 @@ Router.get('/:userId', async (req, res) => {
         const user = {
             userId: findList['_id'],
             name: findList['name'],
-            id: findList['id'],
+            email: findList['id'] + '@teamsparta.co',
             password: findList['password'],
         };
         res.status(200).json(user);
